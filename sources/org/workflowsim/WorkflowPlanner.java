@@ -38,7 +38,7 @@ import org.workflowsim.utils.Parameters.PlanningAlgorithm;
  * @date Apr 9, 2013
  *
  */
-public final class WorkflowPlanner extends SimEntity {
+public  class WorkflowPlanner extends SimEntity {
 
     /**
      * The task list.
@@ -51,8 +51,8 @@ public final class WorkflowPlanner extends SimEntity {
     /**
      * The associated clustering engine.
      */
-    private int clusteringEngineId;
-    private ClusteringEngine clusteringEngine;
+    protected int clusteringEngineId;
+    protected ClusteringEngine clusteringEngine;
 
     /**
      * Created a new WorkflowPlanner object.
@@ -149,7 +149,7 @@ public final class WorkflowPlanner extends SimEntity {
         }
     }
 
-    private void processPlanning() {
+    protected void processPlanning() {
         if (Parameters.getPlanningAlgorithm().equals(PlanningAlgorithm.INVALID)) {
             return;
         }
@@ -203,7 +203,7 @@ public final class WorkflowPlanner extends SimEntity {
      *
      * @param taskList all the tasks
      */
-    private void processImpactFactors(List<Task> taskList) {
+    protected void processImpactFactors(List<Task> taskList) {
         List<Task> exits = new ArrayList<>();
         for (Task task : taskList) {
             if (task.getChildList().isEmpty()) {

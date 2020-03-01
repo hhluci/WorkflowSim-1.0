@@ -38,7 +38,7 @@ import org.workflowsim.utils.Parameters;
  * @since WorkflowSim Toolkit 1.0
  * @date Apr 9, 2013
  */
-public final class WorkflowEngine extends SimEntity {
+public class WorkflowEngine extends SimEntity {
 
     /**
      * The job list.
@@ -256,7 +256,7 @@ public final class WorkflowEngine extends SimEntity {
      * @param id the job id
      * @return
      */
-    private boolean hasJobListContainsID(List jobList, int id) {
+    protected boolean hasJobListContainsID(List jobList, int id) {
         for (Iterator it = jobList.iterator(); it.hasNext();) {
             Job job = (Job) it.next();
             if (job.getCloudletId() == id) {
@@ -385,7 +385,7 @@ public final class WorkflowEngine extends SimEntity {
      * @param <T> the generic type
      * @param cloudletList the new job list
      */
-    private <T extends Cloudlet> void setJobsList(List<T> jobsList) {
+    protected <T extends Cloudlet> void setJobsList(List<T> jobsList) {
         this.jobsList = jobsList;
     }
 
@@ -467,7 +467,7 @@ public final class WorkflowEngine extends SimEntity {
      * @param <T> the generic type
      * @param vmList the new scheduler list
      */
-    private void setSchedulers(List list) {
+    protected void setSchedulers(List list) {
         this.scheduler = list;
     }
 
@@ -486,7 +486,7 @@ public final class WorkflowEngine extends SimEntity {
      * @param <T> the generic type
      * @param vmList the new scheduler id list
      */
-    private void setSchedulerIds(List list) {
+    protected void setSchedulerIds(List list) {
         this.schedulerId = list;
     }
 

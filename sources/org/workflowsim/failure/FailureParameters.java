@@ -58,7 +58,7 @@ public class FailureParameters {
 
     public enum FTCFailure {
 
-        FAILURE_NONE, FAILURE_ALL, FAILURE_VM, FAILURE_JOB, FAILURE_VM_JOB
+        FAILURE_NONE, FAILURE_ALL, FAILURE_VM, FAILURE_JOB, FAILURE_VM_JOB,FAILURE_VM_TRUST
     }
 
     /**

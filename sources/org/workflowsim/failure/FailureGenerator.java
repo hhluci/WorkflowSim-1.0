@@ -39,9 +39,9 @@ public class FailureGenerator {
      * but only limits to maxFailureSizeExtension. Otherwise your failure rate 
      * is too high for this workflow
      */
-    private static final int maxFailureSizeExtension = 50;
-    private static int failureSizeExtension = 0;
-    private static final boolean hasChangeTime = false;
+    protected static final int maxFailureSizeExtension = 50;
+    protected static int failureSizeExtension = 0;
+    protected static final boolean hasChangeTime = false;
     /**
      *
      * @param alpha
@@ -110,6 +110,9 @@ public class FailureGenerator {
             case FAILURE_VM_JOB:
                 generator = FailureParameters.getGenerator(vmId, task.getDepth());
                 break;
+            case FAILURE_VM_TRUST:
+            	 generator  = FailureParameters.getGenerator(vmId, 0);
+                 break;
             default:
                 return false;
         }

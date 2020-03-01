@@ -40,7 +40,7 @@ import org.workflowsim.utils.ReplicaCatalog;
  * @date Apr 9, 2013
  *
  */
-public final class ClusteringEngine extends SimEntity {
+public  class ClusteringEngine extends SimEntity {
 
     /**
      * The task list
@@ -69,11 +69,11 @@ public final class ClusteringEngine extends SimEntity {
     /**
      * The WorkflowEngineId of the WorkflowEngine
      */
-    private final int workflowEngineId;
+    protected  int workflowEngineId;
     /**
      * The WorkflowEngine used in this ClusteringEngine
      */
-    private final WorkflowEngine workflowEngine;
+    protected  WorkflowEngine workflowEngine;
 
     /**
      * Created a new ClusteringEngine object.

@@ -122,7 +122,7 @@ public class Host {
 
 			if (!getRamProvisioner().allocateRamForVm(vm, vm.getCurrentRequestedRam())) {
 				Log.printLine("[VmScheduler.addMigratingInVm] Allocation of VM #" + vm.getId() + " to Host #"
-						+ getId() + " failed by RAM");
+						+ getId() + " ");
 				System.exit(0);
 			}
 
@@ -209,7 +209,7 @@ public class Host {
 
 		if (!getRamProvisioner().allocateRamForVm(vm, vm.getCurrentRequestedRam())) {
 			Log.printLine("[VmScheduler.vmCreate] Allocation of VM #" + vm.getId() + " to Host #" + getId()
-					+ " failed by RAM");
+					+ " ");
 			return false;
 		}
 

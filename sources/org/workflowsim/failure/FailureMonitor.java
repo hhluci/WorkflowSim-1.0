@@ -203,4 +203,20 @@ public class FailureMonitor {
         double alpha = (double) ((double) sumFailures / (double) sumJobs);
         return alpha;
     }
+
+	public static int getVmFaillures(int vmId) {
+		List<FailureRecord> failureRecords = vm2record.get(vmId);
+		int totalFailureRecords = 0;
+		if(failureRecords==null) {
+			totalFailureRecords = 0;
+		}else {
+			for(FailureRecord failureRecord:failureRecords) {
+				totalFailureRecords += failureRecord.failedTasksNum;
+			}
+		}
+		return totalFailureRecords;
+	}
+
+	
+    
 }

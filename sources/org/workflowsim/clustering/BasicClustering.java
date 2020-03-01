@@ -50,7 +50,7 @@ public class BasicClustering implements ClusteringInterface {
     /**
      * All the files.
      */
-    private final List<FileItem> allFileList;
+    protected final List<FileItem> allFileList;
     /**
      * The root task.
      */
@@ -58,7 +58,7 @@ public class BasicClustering implements ClusteringInterface {
     /**
      * the id index.
      */
-    private int idIndex;
+    protected int idIndex;
 
     /**
      * Gets the files
@@ -159,7 +159,7 @@ public class BasicClustering implements ClusteringInterface {
      * @param taskList the task list
      * @return tasks the newly created tasks
      */
-    protected final Job addTasks2Job(List<Task> taskList) {
+    protected  Job addTasks2Job(List<Task> taskList) {
         if (taskList != null && !taskList.isEmpty()) {
             int length = 0;
 

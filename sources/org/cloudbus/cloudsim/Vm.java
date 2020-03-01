@@ -81,8 +81,8 @@ public class Vm {
 	 * 
 	 * @param id unique ID of the VM
 	 * @param userId ID of the VM's owner
-	 * @param mips the mips
-	 * @param numberOfPes amount of CPUs
+	 * @param mips the mips,million instruction per second, cpu's performance
+	 * @param numberOfPes amount of CPUs, core number required for the current vm
 	 * @param ram amount of ram
 	 * @param bw amount of bandwidth
 	 * @param size amount of storage

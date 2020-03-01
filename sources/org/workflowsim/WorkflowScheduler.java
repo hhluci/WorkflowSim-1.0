@@ -50,7 +50,7 @@ public class WorkflowScheduler extends DatacenterBroker {
     /**
      * The workflow engine id associated with this workflow algorithm.
      */
-    private int workflowEngineId;
+    protected int workflowEngineId;
 
     /**
      * Created a new WorkflowScheduler object.
@@ -135,7 +135,7 @@ public class WorkflowScheduler extends DatacenterBroker {
      * @param name the SchedulingAlgorithm name
      * @return the algorithm that extends BaseSchedulingAlgorithm
      */
-    private BaseSchedulingAlgorithm getScheduler(SchedulingAlgorithm name) {
+    protected BaseSchedulingAlgorithm getScheduler(SchedulingAlgorithm name) {
         BaseSchedulingAlgorithm algorithm;
 
         // choose which algorithm to use. Make sure you have add related enum in
@@ -336,7 +336,7 @@ public class WorkflowScheduler extends DatacenterBroker {
     /**
      * A trick here. Assure that we just submit it once
      */
-    private boolean processCloudletSubmitHasShown = false;
+    protected boolean processCloudletSubmitHasShown = false;
 
     /**
      * Submits cloudlet (job) list
